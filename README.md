@@ -1,2 +1,2 @@
 # sustainability-definition
-A few pieces of python code for manipulating survey data on sustainability definition
+A study to produce a universal up-to-date definition for sustainability
