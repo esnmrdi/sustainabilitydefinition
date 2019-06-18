@@ -102,4 +102,6 @@ def get_tweets(query, log_file):
 
 #%% [markdown]
 # ### Execution
-get_tweets("sustainability", "./Data/tweets - 3.csv")
+get_tweets("sustainability", "./Data/tweets - 4.csv")
+
+#%%
