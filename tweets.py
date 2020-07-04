@@ -1,14 +1,14 @@
-#%% [markdown]
+# %% [markdown]
 # ## Retrieving recent week's tweets (search results for sustainability)
 # ### Ehsan Moradi, Ph.D. Candidate
 
-#%% [markdown]
+# %% [markdown]
 # ### Load required libraries
 import tweepy
 import json
 import csv
 
-#%% [markdown]
+# %% [markdown]
 # ### API credentials, target keyword, and other settings
 CONSUMER_KEY = "R5XxaBpbym5AVZTcORT0KcXGS"
 CONSUMER_SECRET = "IvFPry2K55h3XBq53UunPpi2rugQjJZo9ADQ7dfZgkzshU2mmu"
@@ -28,15 +28,17 @@ COLUMNS = [
     "FULL_TEXT",
 ]
 
-#%% [markdown]
+# %% [markdown]
 # ### Get authentication
+
+
 def get_authorization():
     auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
     auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
     return auth
 
 
-#%% [markdown]
+# %% [markdown]
 # ### A never-ending loop to search for tweets corresponding to a keyword and save the results in a text file
 def get_tweets(query, log_file):
     api = tweepy.API(
@@ -100,8 +102,8 @@ def get_tweets(query, log_file):
                 print("An error happened: {}".format(str(e)))
 
 
-#%% [markdown]
+# %% [markdown]
 # ### Execution
 get_tweets("sustainability", "./Data/tweets - 4.csv")
 
-#%%
+# %%
